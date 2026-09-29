@@ -1,0 +1,26 @@
+{
+  "name": "angular-pozdrav",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": "^22.12.0 || ^24.0.0" },
+  "scripts": {
+    "config": "node --env-file-if-exists=.env scripts/generate-environment.mjs",
+    "prestart": "npm run config",
+    "start": "ng serve --host 127.0.0.1",
+    "prebuild": "npm run config",
+    "build": "ng build"
+  },
+  "dependencies": {
+    "@angular/common": "21.2.24",
+    "@angular/compiler": "21.2.24",
+    "@angular/core": "21.2.24",
+    "@angular/platform-browser": "21.2.24",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@angular/build": "21.2.24",
+    "@angular/cli": "21.2.24",
+    "@angular/compiler-cli": "21.2.24",
+    "typescript": "5.9.3"
+  }
+}

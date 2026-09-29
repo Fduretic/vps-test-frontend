@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        USER_NAME: ${USER_NAME:-Ivan}
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1/health]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s

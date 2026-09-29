@@ -1,0 +1,16 @@
+version: 1
+compose: compose.yaml
+public:
+  service: web
+  port: 80
+technologies:
+  - name: Angular
+    version: '21.2.24'
+  - name: Nginx
+    version: '1.28'
+environment:
+  - key: USER_NAME
+    description: Ime korisnika u pozdravu (javno vidljivo u frontendu)
+    required: true
+    secret: false
+    phase: build
